@@ -1,4 +1,4 @@
-# Weather Now
+# Wiki What
 
 ## Frontend Project - Geolocation
 
