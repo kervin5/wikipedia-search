@@ -3,8 +3,15 @@
   transform: translate(-50%, -50%);
   top:50%;
   left:50%;
+  transition: 0.5s;
 }
-.search-wrapper.active {}
+.search-wrapper.active {
+}
+
+.move-up {
+  top: 100px;
+  transition: 0.5s;
+}
 
 .search-wrapper .input-holder {
   height: 70px;
