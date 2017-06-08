@@ -1,6 +1,6 @@
 # Wiki What
 
-## Frontend Project - Geolocation
+## Wikipedia search application
 
 ### Multiple API implementation
 
