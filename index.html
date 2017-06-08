@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<script src="js/script.js"></script>
+<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="js/min/script-min.js"></script>
 </body>
 </html>
