@@ -8,11 +8,13 @@ function searchToggle(obj, evt){
     var container = $(obj).closest('.search-wrapper');
     if(!container.hasClass('active')){
         container.addClass('active');
+        $(".colored-bg").addClass("expanded");
         evt.preventDefault();
     }
     else if(container.hasClass('active') && $(obj).closest('.input-holder').length === 0){
         container.removeClass('active');
         container.removeClass("move-up");
+        $(".colored-bg").removeClass("expanded shrink");
         // clear input
         container.find('.search-input').val('');
     }
@@ -20,8 +22,9 @@ function searchToggle(obj, evt){
 
 $(".search-icon").click(function () {
     var wrapper = $(".search-wrapper");
-    if(wrapper.hasClass("active") && isExpanded()){
+    if(wrapper.hasClass("active") && isExpanded()){ // moves the searchvar to the top
         wrapper.addClass("move-up");
+        $(".expanded").addClass("shrink");
     }
 });
 
@@ -39,7 +42,7 @@ $(document).ready(function() {
             //output into div
             $(".value").html("Your Search Value: " + searchquery);
 
-            var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + searchquery + "&limit=10&callback=?";
+            var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + searchquery + "&prop=images&limit=10&callback=?";
 
             //output link
             $(".srlink").html("Link: " + link);

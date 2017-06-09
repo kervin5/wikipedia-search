@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div class="search-wrapper">
-    <div class="input-holder">
-        <input type="text" class="search-input" placeholder="Type to search" id="wiki-search" />
-        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+<div class="colored-bg expanded">
+    <div class="search-wrapper">
+        <div class="input-holder">
+            <input type="text" class="search-input" placeholder="Type to search" id="wiki-search"/>
+            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
     </div>
-    <span class="close" onclick="searchToggle(this, event);"></span>
 </div>
 <div class="results-wrapper">
     <div class="results">
