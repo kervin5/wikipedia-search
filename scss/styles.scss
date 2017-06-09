@@ -153,12 +153,20 @@ body {
   margin-top: 150px;
 }
 
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
 .colored-bg {
   background-color: blue;
   width: 100px;
   height: 100px;
   position: absolute;
-  border-radius: 50px;
   transform: translate(-50%, -50%);
   top:50%;
   left:50%;
@@ -178,4 +186,16 @@ body {
   .search-wrapper {
     top: 75%;
   }
+}
+
+.wiki-result {
+  margin: 0 auto 30px;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  max-width: 1200px;
+}
+
+.srlink {
+  width: 100%;
 }
