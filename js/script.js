@@ -15,27 +15,22 @@ function searchToggle(obj, evt){
         container.removeClass('active');
         container.removeClass("move-up");
         $(".colored-bg").removeClass("shrink");
+        $(".results").empty();
         // clear input
         container.find('.search-input').val('');
     }
 }
 
-$(".search-icon").click(function () {
-    var wrapper = $(".search-wrapper");
-    if(wrapper.hasClass("active") && isExpanded()){ // moves the searchvar to the top
-        wrapper.addClass("move-up");
-        $(".expanded").addClass("shrink");
-    }
-});
 
 // Wikipedia API call
 
 $(document).ready(function() {
 
     $(".search-icon").on("click", function() {
+
         if(isExpanded()){
             $(".results").empty();
-
+            $(".jawn").show();
             //gets input and put it in variable
             var searchquery = document.getElementById("wiki-search").value;
 
@@ -56,10 +51,17 @@ $(document).ready(function() {
                  data[3] = link;
                  */
 
+            }).done(function (data) {
                 for(var i =0; i < data[1].length; i++) {
                     $(".results").prepend('<div class="wiki-result">' + '<a href =' + data[3][i] + ' target=_blank>' + '<h1>' + data[1][i] + '</h1></a>' + '<h3>' + data[2][i] +'</h3></div>' );
-
                 }
+
+                //Shows results
+                $(".jawn").hide();
+                var wrapper = $(".search-wrapper");
+                wrapper.addClass("move-up");
+                $(".expanded").addClass("shrink");
+
             });
         }
     });
