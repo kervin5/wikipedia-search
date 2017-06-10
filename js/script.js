@@ -30,7 +30,7 @@ $(document).ready(function() {
 
         if(isExpanded()){
             $(".results").empty();
-            $(".jawn").show();
+            $(".loader").fadeIn(100);
             //gets input and put it in variable
             var searchquery = document.getElementById("wiki-search").value;
 
@@ -57,7 +57,7 @@ $(document).ready(function() {
                 }
 
                 //Shows results
-                $(".jawn").hide();
+                $(".loader").hide();
                 var wrapper = $(".search-wrapper");
                 wrapper.addClass("move-up");
                 $(".expanded").addClass("shrink");
