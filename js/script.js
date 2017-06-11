@@ -6,16 +6,8 @@ function isExpanded() {
 function wikiSearch(value) {
     $(".results").empty();
     $(".loader").fadeIn(100);
-    //gets input and put it in variable
-    var searchquery = value;
 
-    //output into div
-    $(".value").html("Your Search Value: " + searchquery);
-
-    var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + searchquery + "&prop=images&limit=10&callback=?";
-
-    //output link
-    $(".srlink").html("Link: " + link);
+    var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + value + "&prop=images&limit=10&callback=?";
 
     $.getJSON(link, function(data) {
         $(".raw").html(JSON.stringify(data[1]));
@@ -27,7 +19,7 @@ function wikiSearch(value) {
     }).done(function (data) {
         console.log(data);
         for(var i =0; i < data[1].length; i++) {
-            $(".results").prepend('<div class="wiki-result">' + '<a href =' + data[3][i] + ' target=_blank>' + '<h1>' + data[1][i] + '</h1></a>' + '<h3>' + data[2][i] +'</h3></div>' );
+            $(".results").prepend('<div class="wiki-result">' + '<a href =' + data[3][i] + ' target=_blank>' + '<h3>' + data[1][i] + '</h3></a>' + '<h4>' + data[3][i] + '</h4>'+ '<p>' + data[2][i] +'</p></div>' );
         }
         //Shows results
         $(".loader").hide();
@@ -61,17 +53,18 @@ function searchToggle(obj, evt){
 
 function submitFn(obj, evt){
     var value = $(obj).find('.search-input').val().trim();
+    var _html = "";
 
-    var _html = "Yup yup! Your search text sounds like this: ";
     if(!value.length){
         _html = "Yup yup! Add some text friend :D";
+        $(obj).find('.result-container').html('<span>' + _html + '</span>');
     }
     else{
-        _html += "<b>" + value + "</b>";
         // Wikipedia API call
         wikiSearch(value);
+        $(".search-query").find(".words").text(value);
     }
-    $(obj).find('.result-container').html('<span>' + _html + '</span>');
+
     $(obj).find('.result-container').fadeIn(100);
     evt.preventDefault();
 }
