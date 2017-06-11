@@ -323,8 +323,13 @@ body {
   z-index: 101;
   font-family:"Open Sans", Arial, Verdana, sans-serif;
   font-size: 1.6rem;
-  //color: #757575;
   color: #212121;
+}
+
+@media (max-height: 570px) {
+  .title {
+    font-size: 2.5em;
+  }
 }
 
 @media (min-width: 820px) AND (max-width: 1117px ) {
