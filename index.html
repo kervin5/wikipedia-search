@@ -21,24 +21,37 @@
             <i class="fa fa-linkedin" aria-hidden="true"></i>
         </div>
     </div>
+    <form onsubmit="submitFn(this, event);">
+        <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Type to search" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                <div class="loader"></div>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+            <div class="result-container">
 
-    <div class="search-wrapper">
-        <div class="input-holder">
-            <input type="text" class="search-input" placeholder="Type to search" id="wiki-search"/>
-            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
-            <div class="loader"></div>
+            </div>
         </div>
-        <span class="close" onclick="searchToggle(this, event);"></span>
-    </div>
+    </form>
+    <!--<div class="search-wrapper">-->
+        <!--<div class="input-holder">-->
+            <!--<input type="text" class="search-input" placeholder="Type to search" id="wiki-search" required/>-->
+            <!--<button id="searchbtn" class="search-icon" onclick="searchToggle(this, event);"><span></span></button>-->
+
+        <!--</div>-->
+        <!--<span class="close" onclick="searchToggle(this, event);"></span>-->
+    <!--</div>-->
 </div>
-<div class="srlink">
-</div>
+
 <div class="results-wrapper">
     <div class="results">
     </div>
 </div>
 <div class="value">
 
+</div>
+<div class="srlink">
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>

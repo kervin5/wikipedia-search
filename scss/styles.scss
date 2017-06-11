@@ -158,6 +158,18 @@ $bgcolor : #FFC107;
   top: 10px;
 }
 
+.search-wrapper .result-container {
+  width: 100%;
+  position: absolute;
+  top:80px;
+  left:0px;
+  text-align: center;
+  font-family: "Open Sans", Arial, Verdana;
+  font-size: 14px;
+  display:none;
+  color:#B7B7B7;
+}
+
 // Document Styling
 
 body {
@@ -374,7 +386,7 @@ body {
     position: absolute;
 
     .header {
-      background-color: red;
+      background-color: $bgcolor;
       position: fixed;
       top:0;
       left: 0;
