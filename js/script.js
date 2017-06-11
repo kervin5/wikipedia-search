@@ -56,15 +56,12 @@ function submitFn(obj, evt){
     var _html = "";
 
     if(!value.length){
-        _html = "Yup yup! Add some text friend :D";
-        $(obj).find('.result-container').html('<span>' + _html + '</span>');
+        $(obj).find('.error-container').fadeIn(100).delay(2000).fadeOut(2000);
     }
     else{
         // Wikipedia API call
         wikiSearch(value);
         $(".search-query").find(".words").text(value);
     }
-
-    $(obj).find('.result-container').fadeIn(100);
     evt.preventDefault();
 }

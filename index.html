@@ -17,7 +17,7 @@
         <div class="title">
             <h1><span>W</span>ikihunt <span><i class="fa fa-globe" aria-hidden="true"></i></span></h1>
             <div class="subtitle">
-                <p>The best Wikipedia's search engine</p>
+                <p>The best Wikipedia search engine</p>
             </div>
         </div>
 
@@ -25,6 +25,9 @@
             <a href="https://github.com/kervin5/wikipedia-search"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/kervin5/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         </div>
+    </div>
+    <div class="random-article">
+        <a href="https://en.wikipedia.org/wiki/Special:Random">random <i class="fa fa-random" aria-hidden="true"></i></a>
     </div>
     <form onsubmit="submitFn(this, event);">
         <div class="search-wrapper">
@@ -34,15 +37,13 @@
                 <div class="loader"></div>
             </div>
             <span class="close" onclick="searchToggle(this, event);"></span>
-            <div class="result-container">
-
+            <div class="error-container">
+                <span class="error-text">Yup yup! Add some text friend :D</span>
             </div>
             <br />
         </div>
     </form>
-    <div class="random-article">
-        <a href="https://en.wikipedia.org/wiki/Special:Random">random <i class="fa fa-random" aria-hidden="true"></i></a>
-    </div>
+
 </div>
 
 <div class="results-wrapper">
@@ -55,7 +56,7 @@
 
 <footer>
     <p>made by <i class="fa fa-hand-paper-o" aria-hidden="true"></i> and with <i class="fa fa-heart" aria-hidden="true"></i> by
-        <a href="https://kervin.greenjocote.com">Kervin</a> </p>
+        <a href="http://kervin.greenjocote.com">Kervin</a> </p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>

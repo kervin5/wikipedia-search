@@ -158,16 +158,25 @@ $bgcolor : #FFC107;
   top: 10px;
 }
 
-.search-wrapper .result-container {
+.search-wrapper .error-container {
   width: 100%;
   position: absolute;
-  top:80px;
-  left:0px;
+  top:100px;
+  left:50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-family: "Open Sans", Arial, Verdana;
-  font-size: 14px;
   display:none;
-  color:#4E342E;
+  max-width: 220px;
+
+  .error-text {
+    font-family: "Open Sans", Arial, Verdana;
+    font-size: 14px;
+    color:#4E342E;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
 }
 
 // Document Styling
