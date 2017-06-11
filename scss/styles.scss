@@ -274,7 +274,9 @@ body {
 }
 
 .colored-bg {
-  background-color: $bgcolor;
+  //background-color: $bgcolor;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -294,7 +296,11 @@ body {
   top: 40%;
   transition: 0.5s;
   font-size: 4em;
-  font-family: 'Righteous', cursive;
+  font-family: 'Freckle Face', cursive;
+
+  span {
+    color: #e74c3c;
+  }
 }
 
 @media (min-width: 820px) AND (max-width: 1117px ) {
@@ -386,7 +392,8 @@ body {
     position: absolute;
 
     .header {
-      background-color: $bgcolor;
+      background-image: url(../images/bg.jpg);
+      background-size: cover;
       position: fixed;
       top:0;
       left: 0;
