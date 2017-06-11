@@ -284,9 +284,6 @@ body {
 }
 
 // Main container
-.hidde {
-  display: none;
-}
 
 .colored-bg {
   background-image: url(../images/bg.jpg);
@@ -455,6 +452,27 @@ body {
       top: 10px;
     }
 
+  }
+}
+
+.random-article {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  clear: both;
+  position: relative;
+  top:70vh;
+
+
+  a {
+    font-family:'Righteous', cursive;
+    color: #2ecc71;
+    text-decoration: none;
+    line-height: 0.3em;
+
+    .fa {
+      vertical-align: middle;
+    }
   }
 }
 
