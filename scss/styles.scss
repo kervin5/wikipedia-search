@@ -336,12 +336,14 @@ body {
 
 .social {
   position: absolute;
-  color: white;
   font-size: 2em;
   right: 40px;
   top: 20px;
   transition: 0.5s;
 
+  a {
+    color: white;
+  }
   .fa {
     margin-left: 10px;
   }
@@ -474,5 +476,26 @@ body {
 
   p {
     font-weight: lighter;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #FFA000;
+  text-align: center;
+  z-index: 120;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-family: 'Roboto', sans-serif;
+
+  .fa {
+    color:$glasscolor;
+  }
+
+  a {
+    color: #4E342E;
   }
 }
